@@ -19,6 +19,11 @@ export default class AudioReactRecorder extends React.Component {
     super(props)
 
     this.canvasRef = React.createRef()
+
+    await this.setupMic()
+
+    this.leftchannel.length = this.rightchannel.length = 0
+    this.recordingLength = 0
   }
 
   //TODO: add the props definitions
