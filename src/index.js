@@ -20,10 +20,7 @@ export default class AudioReactRecorder extends React.Component {
 
     this.canvasRef = React.createRef()
 
-    await this.setupMic()
-
-    this.leftchannel.length = this.rightchannel.length = 0
-    this.recordingLength = 0
+    this.initStart
   }
 
   //TODO: add the props definitions
@@ -275,6 +272,13 @@ export default class AudioReactRecorder extends React.Component {
     }
 
     this.setUpRecording()
+  }
+
+  initStart = async () => {
+    await this.setupMic()
+
+    this.leftchannel.length = this.rightchannel.length = 0
+    this.recordingLength = 0
   }
 
   start = async () => {
