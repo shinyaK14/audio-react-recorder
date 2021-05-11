@@ -233,7 +233,7 @@ export default class AudioReactRecorder extends React.Component {
       self.canvasCtx.fillStyle = backgroundColor
       self.canvasCtx.fillRect(0, 0, self.WIDTH, self.HEIGHT)
 
-      self.canvasCtx.lineWidth = 2
+      self.canvasCtx.lineWidth = 4
       self.canvasCtx.strokeStyle = foregroundColor
 
       self.canvasCtx.beginPath()
